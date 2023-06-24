@@ -8,9 +8,9 @@ function fillArray() {
     }
     break;
   }
-  let arr = [];
+  const arr = [];
   for (let i = 0; i < rows; i++) {
-    let row = [];
+    const row = [];
     let columns;
     while (true) {
       columns = parseInt(prompt(`Введіть кількість стовпців для рядка ${i + 1}: `));
@@ -24,11 +24,11 @@ function fillArray() {
       let value;
       while (true) {
         value = prompt(`Введіть значення для елемента [${i}][${j}]: `);
-        if (isNaN(value)) {
+        if (Number.isNaN(parseFloat(value))) {
           alert("Введіть числове значення.");
           continue;
         }
-        if (value = null) {
+        if (value === null) {
           break;
         }
         break;
